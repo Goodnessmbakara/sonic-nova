@@ -1,7 +1,7 @@
 'use client'
 
 import { createAppKit } from '@reown/appkit/react'
-import { StacksMainnet, StacksTestnet } from '@stacks/network'
+import { STACKS_MAINNET, STACKS_TESTNET } from '@stacks/network'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactNode } from 'react'
 
