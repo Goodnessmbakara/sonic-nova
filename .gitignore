@@ -17,11 +17,29 @@
 /.next/
 /out/
 
-# production
-/build
+# Production
+build/
+dist/
+
+# Env & Secrets
+.env
+.env.*
+!.env.example
+*.local
+secrets.json
+
+# Stacks / Blockchain
+.clarinet/
+settings.json
+*.clar.lock
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.log
 
 # misc
-.DS_Store
 *.pem
 
 # debug
