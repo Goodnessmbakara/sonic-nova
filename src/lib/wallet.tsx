@@ -33,7 +33,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
 if (typeof window !== 'undefined' && projectId !== 'YOUR_PROJECT_ID') {
   createAppKit({
     adapters: [], // Stacks adapter config goes here if supported natively, else we use the Stacks.js direct integration
-    networks: [], // Placeholder for now - using Stacks.js manually for actual txs
+    networks: [STACKS_MAINNET, STACKS_TESTNET], 
     metadata,
     projectId,
     features: {
