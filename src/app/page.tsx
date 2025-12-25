@@ -33,73 +33,132 @@ export default function Home() {
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl px-6 flex flex-col items-center">
         
-        {/* Hero Section */}
-        <section className="text-center mt-24 md:mt-32 animate-slide-up">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-neon/10 border border-primary-neon/20 text-primary-neon text-xs font-bold tracking-widest uppercase mb-8">
+      {/* Hero Section */}
+      <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center pt-20 pb-40 px-6 hero-gradient">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[500px] glow-overlay opacity-20"></div>
+        
+        <div className="relative z-10 w-full max-w-7xl flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full premium-glass border border-white/10 text-primary-neon text-xs font-bold tracking-[0.2em] uppercase mb-12 animate-slide-up">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-neon opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-neon"></span>
             </span>
-            Nakamoto Release Live
+            Nakamoto Mainnet Ready
           </div>
           
-          <h1 className="text-6xl md:text-9xl font-black mb-6 leading-[0.9] tracking-[ -0.05em]">
-            BITCOIN <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-neon via-secondary-neon to-accent-gold">
-              SPEED LIMITLESS
+          <h1 className="text-7xl md:text-[10rem] font-black mb-8 leading-[0.85] tracking-[-0.04em] animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            SONIC <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20">
+              EXPANSION
             </span>
           </h1>
           
-          <p className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-            Unleashing the next generation of Stacks performance. 
-            High-octane gaming with instant settlement and Bitcoin security.
+          <p className="text-text-secondary text-xl md:text-2xl max-w-3xl mx-auto mb-16 font-medium leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            Experience the unprecedented speed of Stacks. Zero-lag transactions meet the security of Bitcoin. Built for the next billion.
           </p>
           
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <button 
-              className="sonic-button sonic-button-primary text-lg px-10 py-5 group"
+              className="sonic-button sonic-button-primary text-xl px-14 py-7 group premium-glass"
               onClick={() => document.getElementById('arena')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <Play className="fill-current w-5 h-5 group-hover:scale-110 transition-transform" />
-              Enter Arena
+              <Play className="fill-current w-6 h-6 group-hover:scale-110 transition-transform" />
+              Start Streaking
             </button>
-            <button className="sonic-button sonic-button-secondary text-lg px-10 py-5">
-              <Trophy className="w-5 h-5" />
+            <button className="sonic-button sonic-button-secondary text-xl px-14 py-7 premium-glass">
+              <Trophy className="w-6 h-6" />
               Leaderboard
             </button>
           </div>
+        </div>
+
+        {/* Section Dip Transition */}
+        <div className="absolute bottom-0 left-0 w-full h-[150px] bg-deep" style={{ clipPath: 'ellipse(70% 100% at 50% 100%)' }}></div>
+      </section>
+
+      {/* Main Content Area */}
+      <div className="relative z-20 w-full max-w-7xl px-6 -mt-20">
+        {/* Partner / Trust Bar */}
+        <div className="premium-glass rounded-4xl py-10 px-8 flex flex-wrap justify-around items-center gap-12 mb-32 border-white/5">
+          <div className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
+            <Globe className="w-8 h-8" />
+            <span className="text-2xl font-black tracking-tighter">STACKS</span>
+          </div>
+          <div className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
+            <Zap className="w-8 h-8" />
+            <span className="text-2xl font-black tracking-tighter">REOWN</span>
+          </div>
+          <div className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
+            <Cpu className="w-8 h-8" />
+            <span className="text-2xl font-black tracking-tighter">CLARITY 4</span>
+          </div>
+          <div className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
+            <Activity className="w-8 h-8" />
+            <span className="text-2xl font-black tracking-tighter">NAKAMOTO</span>
+          </div>
+        </div>
+
+        {/* Introduction Section */}
+        <section className="mb-40 text-center md:text-left flex flex-col md:flex-row items-center gap-20">
+          <div className="flex-1">
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+              RELIABLE <span className="text-primary-neon">ON-CHAIN</span> <br />
+              GAMING, ANYWHERE.
+            </h2>
+            <p className="text-text-secondary text-xl leading-relaxed mb-10 max-w-xl font-medium">
+              Sonic Nova leverages the latest Bitcoin scaling technologies to provide a seamless, low-fee gaming experience directly on the world's most secure blockchain.
+            </p>
+            <button className="sonic-button sonic-button-primary px-10 py-5 rounded-2xl">
+              Learn More
+            </button>
+          </div>
+          <div className="flex-1 w-full">
+            <div className="aspect-video premium-glass rounded-5xl border border-white/10 p-2 overflow-hidden animate-float">
+               <div className="w-full h-full rounded-4xl bg-gradient-to-br from-primary-neon/20 to-secondary-neon/20 flex items-center justify-center relative overflow-hidden">
+                 <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-50" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2070)' }}></div>
+                 <Zap className="w-32 h-32 neon-text-primary animate-pulse" />
+               </div>
+            </div>
+          </div>
         </section>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-24 w-full">
+        {/* Stats Grid - Redesigned */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-40 w-full animate-slide-up">
           <StatCard 
-            icon={<Globe className="w-5 h-5" />} 
-            label="Total Artifacts" 
+            icon={<Globe className="w-6 h-6" />} 
+            label="Ecosystem Scale" 
             value="3.2M+" 
             color="primary"
           />
           <StatCard 
-            icon={<Activity className="w-5 h-5" />} 
-            label="Block Time" 
+            icon={<Activity className="w-6 h-6" />} 
+            label="In-Sync Blocks" 
             value="1.4s" 
             color="secondary"
           />
           <StatCard 
-            icon={<Cpu className="w-5 h-5" />} 
-            label="Throughput" 
+            icon={<Cpu className="w-6 h-6" />} 
+            label="Real-time Flow" 
             value="500 TPS" 
             color="gold"
           />
           <StatCard 
-            icon={<Zap className="w-5 h-5" />} 
-            label="Gas Saved" 
+            icon={<Zap className="w-6 h-6" />} 
+            label="Economic Efficiency" 
             value="12.5k STX" 
             color="primary"
           />
         </div>
 
-        {/* Arena Section */}
-        <section id="arena" className="w-full mt-32 mb-40">
+        {/* Arena Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">THE SONIC ARENA</h2>
+          <p className="text-text-secondary text-lg max-w-xl mx-auto">Master the rhythm of the blockchain. Execute micro-actions to build your streak and earn rewards.</p>
+        </div>
+
+        {/* Arena Component */}
+        <section id="arena" className="w-full mb-48">
           <Arena />
         </section>
       </div>
