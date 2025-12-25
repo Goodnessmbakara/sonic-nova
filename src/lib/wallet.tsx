@@ -30,7 +30,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
 }
 
 // Initializing AppKit
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined' && projectId !== 'YOUR_PROJECT_ID') {
   createAppKit({
     adapters: [], // Stacks adapter config goes here if supported natively, else we use the Stacks.js direct integration
     networks: [], // Placeholder for now - using Stacks.js manually for actual txs
@@ -40,4 +40,6 @@ if (typeof window !== 'undefined') {
       analytics: true
     }
   })
+} else if (typeof window !== 'undefined') {
+  console.warn('Sonic Nova: NEXT_PUBLIC_REOWN_PROJECT_ID is missing. Wallet features will be disabled.')
 }
